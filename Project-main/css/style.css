@@ -1,10 +1,11 @@
 *{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Josefin Sans', sans-serif;
 }
 body {
     padding: 0;
     margin:0;
     background-color: rgb(248, 236, 207);
+    font-size: 2rem;
 }
 header {
     background-color: rgb(69, 12, 12);
@@ -14,20 +15,37 @@ header {
 }
 h1{
     text-align: center;
-    font-size: 3rem;
+    font-size: 5rem;
     color: rgb(156, 62, 62);
     margin:0;
     padding: 0;
     /* background-color: darkred; */
 }
 .icon{
-    font-size: 3rem;
+    font-size: 5rem;
     position: fixed;
     left: 0;
     top: 0;
     margin: 0;
     color: rgb(156, 62, 62);
 }
+ .link{
+    position: fixed;
+    margin: 0;
+    right: 0;
+    top: 0;
+    color: rgb(156, 62, 62);
+    text-decoration: none;
+ }
+.link:hover {
+    text-decoration: none;
+  color: rgb(128, 105, 255);
+}
+.link:visited {
+    text-decoration: none;
+    color: rgb(156, 62, 62);
+}
+
 
 
 
