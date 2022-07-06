@@ -5,7 +5,7 @@ body {
     padding: 0;
     margin:0;
     background-color: rgb(248, 236, 207);
-    font-size: 2rem;
+    font-size: 1em;
 }
 header {
     background-color: rgb(69, 12, 12);
@@ -15,35 +15,60 @@ header {
 }
 h1{
     text-align: center;
-    font-size: 5rem;
+    font-size: 1.5em;
     color: rgb(156, 62, 62);
     margin:0;
     padding: 0;
     /* background-color: darkred; */
 }
 .icon{
-    font-size: 5rem;
+    font-size: 1.5em;
     position: fixed;
     left: 0;
-    top: 0;
+    bottom: 0;
     margin: 0;
     color: rgb(156, 62, 62);
 }
- .link{
-    position: fixed;
+.link > a{
+    position: absolute;
     margin: 0;
+    bottom: 0;
     right: 0;
-    top: 0;
-    color: rgb(156, 62, 62);
     text-decoration: none;
+    font-size: 1em;
+    color: rgb(156, 62, 62);
  }
-.link:hover {
-    text-decoration: none;
-  color: rgb(128, 105, 255);
+
+    
+@media (min-width: 1430px){
+    h1{
+        font-size: 2em;
+    }
+    body{
+        font-size: 1.5em;
+    }
+    .link > a{
+        font-size: 2em;
+    }
+    .icon{
+        font-size: 2em;
+    }
 }
-.link:visited {
-    text-decoration: none;
-    color: rgb(156, 62, 62);
+@media (min-width: 700px) {
+    h1{
+        font-size: 2.25em;
+    }
+    body{
+        font-size: 1.5em;
+    }
+    .link > a{
+        font-size: 1.5em;
+    }
+    .icon{
+        font-size: 2.25em;
+        top: 0;
+        left: 0;
+    }
 }
 
 
