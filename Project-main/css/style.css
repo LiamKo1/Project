@@ -8,21 +8,28 @@ body {
     font-size: 1.5em;
 }
 header {
+    position: fixed;
     background-color: rgb(69, 12, 12);
+    width:100%;
+    top: 0;
     border:0;
     margin:0;
-    padding: 0;
+    padding-left: 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
 }
 h1{
     text-align: center;
-    font-size: 2em;
+    font-size: 2.25em;
     color: rgb(156, 62, 62);
     margin:0;
     padding: 0;
     /* background-color: darkred; */
 }
 .icon{
-    font-size: 2em;
+    font-size: 2.25em;
     position: fixed;
     left: 0;
     top: 0;
@@ -30,43 +37,38 @@ h1{
     color: rgb(156, 62, 62);
 }
 .link > a{
-    display:none;
+    display: block;
     position: fixed;
+    padding: auto;
     margin: 0;
     top: 0;
     right: 0;
     text-decoration: none;
-    font-size: 2em;
+    font-size: 2.25em;
     color: rgb(156, 62, 62);
  }
- /* .iconLink {
-    display: none; 
-    isibility: hidden; 
-    top: 0;
+ .iconLink >p {
+    display: none;
+    position: fixed;
+    margin: 0;
+    bottom: 0;
     right: 0;
-    font-size: 2em;
-    color: rgb(156, 62, 62); }*/
- 
- .iconlink >a.fa-id-card {
-
-    top: 0;
-    right: 0;
-    font-size: 2em;
+    text-decoration: none;
+    font-size: 2.25em;
     color: rgb(156, 62, 62);
-
  }
-/* @media (max-width: 1111px) {
+.text {
+    padding-top: 3em;
+}
+@media (max-width: 1111px) {
     .link > a{
        display: none;
+       
     }
-    .iconLink {
-        display: block;
-    }
-    .iconLink > i{
-    
-    visibility: visible;
+    .iconLink > p{
+    display: block;
+    font-size: 2em;
     top: 0;
     right: 0;
-    font-size: 2em;
     }
-}  */
+} 
