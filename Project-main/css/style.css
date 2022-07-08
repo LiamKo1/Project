@@ -47,7 +47,7 @@ h1{
     font-size: 2.25em;
     color: rgb(156, 62, 62);
  }
- .iconLink >p {
+ .iconLink > p {
     display: none;
     position: fixed;
     margin: 0;
@@ -70,5 +70,27 @@ h1{
     font-size: 2em;
     top: 0;
     right: 0;
+    color: rgb(156, 62, 62);
     }
 } 
+footer {
+    position:absolute;
+    width:100%;
+    background-color: rgb(69, 12, 12);
+    left: 0;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+}
+#myselect{
+    left: 0;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+}
+#myselect > option{
+    left: 0;
+    bottom: 0;
+    font-size: 0.75em;
+}

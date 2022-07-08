@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang ="en">
 <head>
     <script src="https://kit.fontawesome.com/2dc8d95830.js" crossorigin="anonymous"></script>
     <title>Top 200 Highest Grossing Movies</title>
@@ -7,6 +7,7 @@
     <meta name="author" content="Liam Ko">
     <meta name="description" content="The Top 200 Hightest Grossing Movies Of All Time">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="javascript" href="js/index.js">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
         </style>
@@ -20,8 +21,9 @@
         <div class="iconLink">
             <p><a href="http://127.0.0.1:5502/About-Me-main/index.html"><i class="fa-solid fa-id-card"></i></a></p>
         </div>
+
     </header>
- 
+
     <nav>
     
             <div class="link">
@@ -33,6 +35,17 @@
     <div class="text">
     <p>There are many great movies that we have all enjoyed watching in theaters, but there are a certain few movies that many people enjoyed. I have created a website that can let you see the movies that made the most money and were the most popular. It may suprise you how much some movies made! </p>
     </div>
+    <footer>
+        <select id="myselect" onchange="change_myselect(this.value)">
+            <option value="">Choose an option:</option>
+            <option value="10">Top 10</option>
+            <option value="50">Top 50</option>
+            <option value="100">Top 100</option>
+            <option value ="200">Top 200</option>
+          </select>
+          <p id="demo"></p>
+
+    </footer>
 </body>
 
 
