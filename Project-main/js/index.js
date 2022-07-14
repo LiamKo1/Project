@@ -1,17 +1,36 @@
-"strict mode"
+let dropdown = document.getElementById('locality-dropdown');
+dropdown.length = 0;
 
-const MyList = document.querySelector('ul');
-const myRequest = new Request('../json/csvjson.json');
+let defaultOption = document.createElement('option');
+defaultOption.text = 'Choose State/Province';
 
-fetch(myRequest)
-    .then(response => response.json())
-    .then(data => {
-        for (let i = 0; i<data.length; i++){
-            let listItem = document.createElement('li')
-            listItem.innerHTML = data [i]["Rank"]
-            listItem.innerHTML = data [i]["Title"]
-            MyList.appendChild(listItem)
-        }
-    })
-    .catch(console.error);
-    console.log(MyList)
+dropdown.add(defaultOption);
+dropdown.selectedIndex = 0;
+
+const url = 'json/info.json';
+
+fetch(url)  
+  .then(  
+    function(response) {  
+      if (response.status !== 200) {  
+        console.warn('Looks like there was a problem. Status Code: ' + 
+          response.status);  
+        return;  
+      }
+
+      // Examine the text in the response  
+      response.json().then(function(data) {  
+        let option;
+    
+    	for (let i = 0; i < data.length; i++) {
+          option = document.createElement('option');
+      	  option.text = data[i].name;
+      	  option.value = data[i].abbreviation;
+      	  dropdown.add(option);
+    	}    
+      });  
+    }  
+  )  
+  .catch(function(err) {  
+    console.error('Fetch Error -', err);  
+  });
