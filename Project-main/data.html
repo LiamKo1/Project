@@ -23,38 +23,18 @@
         </div>
         </header>
         <div class="link">
-            <a href='http://127.0.0.1:5502/About-Me-main/index.html'>About Me</a>
+            <a href='http://127.0.0.1:5501/Project-main/About-Me-main/index.html'>About Me</a>
             
             </div>
     <div id="myData"></div>
-    <script>
-        fetch('json/info.json')
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-                appendData(data);
-            })
-            .catch(function (err) {
-                console.log('error: ' + err);
-            });
-        function appendData(data) {
-            var mainContainer = document.getElementById("myData");
-            for (var i = 0; i < data.length; i++) {
-                var div = document.createElement("div");
-                div.innerHTML =  data[i].Rank + ' ' + data[i].Title + ' ' + data[i].Lifetime_Gross + '                                          ' + data[i].Year;
-                mainContainer.appendChild(div);
-            }
-        }
-    </script>
 
     <footer>
-        <select id="myselect" onchange="change_myselect(this.value)">
-            <option value="">Choose an option:</option>
+        <select id="myselect">
+            <option value="200">Choose an option:</option>
             <option value="10">Top 10</option>
             <option value="50">Top 50</option>
             <option value="100">Top 100</option>
-            <option value ="200">Top 200</option>
+            <option value="200">Top 200</option>
           </select>
           <!-- <p id="demo"></p> -->
           <span class="link3">
@@ -62,17 +42,6 @@
           </span>
     </footer>
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
+<script src="js/index.js"></script>
 </html>
 
